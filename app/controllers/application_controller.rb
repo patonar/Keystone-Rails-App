@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
       super
     end
   end
+  
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
 
   def render_404
     respond_to do |format|
@@ -17,7 +21,5 @@ class ApplicationController < ActionController::Base
       format.any  { head :not_found }
     end
   end
-
-
-  
+ 
 end

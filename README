@@ -1,2 +1,14 @@
 The keystone web app for the web applications we are developing for vulnerability scanning, security and penentration testing.
+It is very minimal, just a starting framework with nice layout. 
 
+Installation Instructions:
+1) git clone the app
+2) Change the config/database.yml.example file to show your database settings (I am using mysql)
+3) Rename config/database.yml.example to database.yml
+4) Edit db/seeds.rb file to create a user in the database (remember username and password)
+5) Type rake db:create for creating a database 
+6) Type rake db:seed
+7) type bundle in the commnand line from the rails app folder
+8) Type rails s to start rails app and go to localhost:3000 -or- Type gem install passenger and then type passenger start (I really like standalone passenger)
+
+Have fun with this very simple app! 

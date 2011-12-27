@@ -1,0 +1,33 @@
+<%= link_to "New User", new_admin_user_path %>
+
+<article class="module">
+<table class="tablesorter" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Email</th>
+			<th>Created</th>
+			<th>Updated</th>
+			<th class="index_action">Edit</th>
+			<th class="index_action">Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.email %></td>
+			<td><%= user.created_at %></td>
+			<td><%= user.updated_at %></td>
+			<td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+			<td><%= link_to 'Destroy', [:admin, user], confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+</article>
+<% content_for :title do %>
+	All Users
+<% end %>
+
+<% content_for :meta_description do %>
+	Displays all users
+<% end %>
