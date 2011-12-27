@@ -12,3 +12,5 @@ Installation Instructions:
 8) Type rails s to start rails app and go to localhost:3000 -or- Type gem install passenger and then type passenger start (I really like standalone passenger)
 
 Have fun with this very simple app! 
+
+* Note: For tests, type guard. If you are on a mac you will need to install libevent gem.
