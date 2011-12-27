@@ -1,0 +1,35 @@
+<div style="margin:0 auto; text-align:center; padding-top:30px">
+	<h1><a href="http://www.clone-systems.com/" id="clone_systems"></a><div id="os_discover"></div></h1>
+		<% if notice %><p class="notice"><%= notice %></p><% end %>
+		<% if alert %><p class="alert"><%= alert %></p><% end %>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :style => "margin:0 auto") do |f| %>
+		<div id="login_label">Login</div>
+		<div style="margin: 50px auto 80px auto;">
+		  <div><%= f.label :email, "Email:" %> <%= f.text_field :email, :class => "sign_in_input", :autocomplete => "off" %></div>
+		  <div><%= f.label :password, "Password:" %> <%= f.password_field :password, :class => "sign_in_input", :autocomplete => "off" %></div>
+		  <div style="clear: both;"></div>
+		  <div><%= f.submit "Login", id: "user_submit" %></div>
+		</div>  
+		  	<div id="login_footer">
+				<small class="left">
+					<%= Time.now.utc.strftime("%a %b %d, %Y %I:%M:%S %P %Z") %>
+					&nbsp;&nbsp;
+				</small>
+				<small class="right">
+					<a href="http://www.clone-systems.com">www.clone-systems.com</a>
+				</small>
+			</div>
+			
+		  <% if devise_mapping.rememberable? -%>
+		    <footer>
+		    	<%= link_to "Forgot your password?", new_password_path(resource_name) %>
+		    	<div id="remember_me"><%= f.label :remember_me %> <%= f.check_box :remember_me %></div> 
+		    </footer>
+		  <% end -%>
+		<% end %>
+	<div style="clear: both"></div>
+</div>
+
+
+
+<% content_for :title do %><%=t "sign_in" %><% end %>

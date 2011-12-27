@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title><%= yield(:title) || "#{controller.controller_name.titleize} #{controller.action_name.titleize}" %></title>
+	<meta name="description" content="<%= yield(:title) || "#{controller.controller_name.titleize} #{controller.action_name.titleize}" %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<%= stylesheet_link_tag "login/all" %>
+	<%= csrf_meta_tags %>
+	<%= javascript_include_tag "modernizr-2.0.6.min.js" %>
+</head>
+
+
+<body>
+<div id="container">
+	<div id="content">
+		<%= yield %>
+	</div>
+</div> <!--! end of #container -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="<%= asset_path("jquery.js") %>"><\/script>')</script>
+<%= javascript_include_tag "login/all" %>
+<script>
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+</body>
+
+
+</html>
+

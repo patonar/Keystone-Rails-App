@@ -1,0 +1,20 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Name: Tom Nianios, John Deliyiannis, Tasos Laskos
+  Twitter: @johndel, @Zap0tek
+  Location: Greece
+
+/* THANKS */
+  Names (& URL): Tom Nianios (Clone Systems - http://clone-systems.com/)
+
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, Ruby on Rails 3.1.3
+
+
+/* DESCRIPTION */
+  A modular Ruby on Rails application for security protection. This is the Keystone app that will include everything else.
