@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'therubyracer'
+gem 'rb-readline'
 
 group :test, :development do
   gem 'capistrano'
