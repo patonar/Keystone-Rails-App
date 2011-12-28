@@ -2,6 +2,19 @@
 	<li class="first">
 		<%= link_to 'Dashboard', dashboard_path %>
 	</li>
+
+	<li>
+    <% ApplicationHelper.modules.each do |mod, engine| %>
+		<%= link_to mod.title, '/' + engine.engine_name %>
+
+		<ul data-menu="<%= engine.engine_name %>">
+			<% mod.menu_items.each do |title, path| %>
+			<li><%= link_to title, path %></li>
+			<%end%>
+		</ul>
+	<%end%>
+	</li>
+
 	<div id="menu-right">
 		<li>
 			<%= link_to "Users", admin_users_path %>
