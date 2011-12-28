@@ -53,12 +53,10 @@ module Keystone
     
     # Also for Heroku Deployment => http://guides.rubyonrails.org/asset_pipeline.html#precompiling-assets
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += ['*.js', '*.css'] #+= %w( sign_in.css.erb pages_css/all admin_css/all )
+    config.assets.precompile += ['*.js', '*.css']
     
     # Define Devise Layouts
     config.to_prepare do
-      Devise::ConfirmationsController.layout "login"
-      Devise::PasswordsController.layout "login"
       Devise::SessionsController.layout "login"
     end
   end

@@ -1,2 +1,2 @@
 //= require jquery_ujs
-//= require pages/menu
+//= require core/menu
