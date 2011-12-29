@@ -30,7 +30,7 @@ gem 'keystone-arachni-engine', :git => 'git://github.com/Zapotek/keystone-arachn
 
 # System requirements
 
-Rails 3.1.3
+Rails 3.1.3 <br/>
 Ruby 1.9.3
 
 # Note
